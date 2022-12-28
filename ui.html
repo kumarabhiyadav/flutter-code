@@ -1,0 +1,23 @@
+<button id="create">Create Code</button>
+<button id="cancel">Cancel</button>
+
+<div id="text">ABC</div>
+<script>
+ onmessage = (event) => {
+
+  if(event.data.pluginMessage.event == "node"){
+    
+    document.write(event.data.pluginMessage.event.data)
+  }
+
+  
+}
+
+  document.getElementById("create").onclick = () => {
+    parent.postMessage({ pluginMessage: { type: "create-code" } }, "*");
+  };
+
+  document.getElementById("cancel").onclick = () => {
+    parent.postMessage({ pluginMessage: { type: "cancel" } }, "*");
+  };
+</script>

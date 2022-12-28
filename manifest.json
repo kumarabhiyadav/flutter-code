@@ -1,0 +1,10 @@
+{
+  "name": "flutter-code",
+  "id": "1189681400110986526",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "editorType": [
+    "figma"
+  ],
+  "ui": "ui.html"
+}

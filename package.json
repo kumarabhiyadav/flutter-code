@@ -1,0 +1,21 @@
+{
+  "name": "flutter-code",
+  "version": "1.0.0",
+  "description": "Your Figma Plugin",
+  "main": "code.js",
+  "scripts": {
+    "watch": "npm run build -- --watch",
+    "build": "webpack",
+    "start": "tsnd --respawn tsconfig.json"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.57.1",
+    "@types/node": "^18.11.18",
+    "ts-loader": "^9.4.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "*",
+    "webpack-cli": "^5.0.1"
+  }
+}
