@@ -5,7 +5,7 @@ module.exports = {
   devtool: "inline-source-map",
   entry: {
     code: "./src/code.ts",
-    helper: "./src/helper/classfication.ts",
+    helper: "./src/helper/LayoutClassfication.ts",
     figma_properties: "./src/utils/figma_properties.ts",
     flutter_properties: "./src/utils/flutter_properties.ts",
     generator: "./src/utils/generator.ts",

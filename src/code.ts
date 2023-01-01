@@ -4,6 +4,7 @@
 // You can access browser APIs in the <script> tag inside "ui.html" which has a
 // full browser environment (see documentation).
 
+import { GroupAndNodeSeperator } from "../src/helper/layoutClassfication";
 
 // This shows the HTML page in "ui.html".
 figma.showUI(__html__);
@@ -19,11 +20,19 @@ figma.ui.onmessage = async (msg) => {
   // your HTML page is to use an object with a "type" property like this.
   if (msg.type === "create-code") {
     let selectedFrame = figma.currentPage.selection;
-    // eachNode(selectedFrame);
-    // let classfication = new Classifiaction(selectedFrame[0])
+    let spliter = new GroupAndNodeSeperator(selectedFrame[0]);
+    let unsorted_nodes  = spliter.arrayOfChildrens();
+    log(unsorted_nodes)
+    unsorted_nodes.sort((cur,pre)=>cur.y - pre.y);
+    // log(unsorted_nodes);
   }
 
   // Make sure to close the plugin when you're done. Otherwise the plugin will
   // keep running, which shows the cancel button at the bottom of the screen.
   // figma.closePlugin();
 };
+
+
+function log(msg:any){
+  console.log(msg)
+}
