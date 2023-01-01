@@ -25,7 +25,7 @@ export class GroupAndNodeSeperator {
     this.frameNode = frameNode;
   }
 
-  arrayOfChildrens():Array<any> {
+  arrayOfChildrens(): Array<any> {
     let arrayOfChildrens = [];
     for (const node of this.frameNode["children"]) {
       let child = this.nodeChildrens(node);
@@ -46,7 +46,7 @@ export class GroupAndNodeSeperator {
       node.type == "GROUP" ||
       node.type == "FRAME"
     ) {
-      return this.nodeChildrens(node.children);
+      this.nodeChildrens(node.children);
     } else {
       return node;
     }
