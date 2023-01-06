@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     code: "./src/code.ts",
     helper: "./src/helper/Splitter.ts",
+    flutterWidgets: "./src/utils/flutterWidgets.ts",
   },
   output: {
     filename: "[name].js",
